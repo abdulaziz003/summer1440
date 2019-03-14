@@ -209,7 +209,7 @@
                 $("<th>")
                   .addClass("prev")
                   .attr("data-action", "previous")
-                  .append($("<span>").addClass(options.icons.previous))
+                  .append($("<span>").addClass(options.icons.previous).text("<<"))
               )
               .append(
                 $("<th>")
@@ -221,7 +221,7 @@
                 $("<th>")
                   .addClass("next")
                   .attr("data-action", "next")
-                  .append($("<span>").addClass(options.icons.next))
+                  .append($("<span>").addClass(options.icons.next).text(">>"))
               )
           ),
           contTemplate = $("<tbody>").append(
