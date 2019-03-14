@@ -141,7 +141,7 @@ function insert_value() {
   datarow.push(name);
   var job = $("#job").val();
   datarow.push(job);
-  var phone = $("#phone").val();
+  var phone = "'" + $("#phone").val();
   datarow.push(phone);
   var bach_type = $("#bach_type").val();
   datarow.push(bach_type);
