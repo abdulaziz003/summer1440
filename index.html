@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v3.8.5">
+  <title>التسجيل بالصيفي</title>
+
+
+  <link href="css/bootstrap.css" rel="stylesheet" />
+  <link href="css/bootstrap-datetimepicker.css" rel="stylesheet" />
+
+
+  <style>
+    input {
+      margin-top: 1em;
+      font-family: 'Tajawal', sans-serif;
+    }
+
+    table {
+      font-family: 'Tajawal', sans-serif;
+
+    }
+
+    .note {
+      font-family: 'Tajawal', sans-serif;
+    }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="css/cover.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" id="top">
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand">ثانوية الامير فيصل بالعقيق</h3>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link ml-3 active" href="index.html">تسجيل الصيفي</a>
+          <a class="nav-link" href="files/1222-201931183144.pdf">تعميم الصيفي</a>
+          <a class="nav-link" href="https://api.whatsapp.com/send?phone=966555582436">للتواصل</a>
+        </nav>
+      </div>
+    </header>
+    <div class="container" id="message">
+
+    </div>
+    <main role="main" class="inner cover mt-5">
+      <h1 class="cover-heading">التسجيل بالصيفي
+        <small>📌</small>
+      </h1>
+      <p class="lead">الرجاء تعبئة الحقول بما يناسب وارسالها</p>
+      <div class="lead">
+        <form id="resetForm" action="javascript:;" onsubmit="insert_value()">
+          <input id="national_id" class="input-group" type="text" pattern="^[0-9\.\-\/]+$" placeholder="السجل المدني" title="ادخل رقم سجل صحيح"
+            required autofocus>
+            <input id="name" class="input-group" type="text" placeholder="الاسم" required>
+            <select id="job" class="custom-select mt-3 note" id="inputGroupSelect02" required>
+              <option selected>اختر العمل الحالي</option>
+              <option value="معلم">معلم</option>
+              <option value="وكيل">وكيل</option>
+              <option value="قائد">قائد</option>
+            </select>
+            <input id="phone" class="input-group" type="text" pattern="^[0-9\.\-\/]+$" placeholder="رقم الجوال" title="ادخل رقم جوال صحيح"
+              required>
+              
+              <input id="bach_type" class="input-group" type="text" placeholder=" تخصص البكالوريوس">
+
+            <select id="dgree_type" class="custom-select mt-3 note" id="inputGroupSelect02" required>
+              <option selected>نوع البكالوريوس</option>
+              <option value="تربوي">تربوي</option>
+              <option value="غير تربوي">غير تربوي</option>
+            </select>
+            <!-- <div style="vertical-align: top; display: inline-block; margin-top: 1em;">
+              <input class="input-group note" id="bachDate" placeholder="تاريخ البكالوريوس" required/>
+            </div> -->
+
+            <div class="input-group date">
+              <input type="text" class="form-control" id="bachDate" placeholder="تاريخ البكالوريوس" required>
+              <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+            </div>
+
+
+          <input id="MA_type" class="input-group" type="text" placeholder=" تخصص الماجستير ان وجد">
+
+          <!-- <div style="vertical-align: top; display: inline-block; margin-top: 1em;">
+            <input class="input-group note" id="MADate" placeholder="تاريخ الماجستير"/>
+          </div> -->
+          <div class="input-group date">
+            <input type="text" class="form-control" id="MADate" placeholder="تاريخ الماجستير">
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+          </div>
+
+
+          <input id="PHD_type" class="input-group" type="text" placeholder="تخصص الدكتوراه ان وجد">
+          
+          <!-- <div style="vertical-align: top; display: inline-block; margin-top: 1em;">
+            <input class="input-group note" id="PHDDate" placeholder="تاريخ الدكتوراه"/>
+          </div> -->
+          <div class="input-group date">
+            <input type="text" class="form-control" id="PHDDate" placeholder="تاريخ الدكتوراه">
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+          </div>
+
+
+          <select id="job_type" class="custom-select mt-3 note" id="inputGroupSelect02" required>
+            <option selected>العمل المرشح له</option>
+            <option value="معلم">معلم</option>
+            <option value="مرشد طلابي">مرشد طلابي</option>
+            <option value="وكيل">وكيل</option>
+            <option value="مساعد إداري">مساعد إداري</option>
+            <option value="محضر مختبر">محضر مختبر</option>
+          </select>
+          
+          <input id="teacher_job_type" class="input-group" type="text" placeholder="التخصص المتقدم عليه" required>
+
+          <!-- <div style="vertical-align: top; display: inline-block; margin-top: 1em;">
+            <input class="input-group note" id="MOEDate" placeholder="تاريخ المباشرة بالوزارة" required/>
+          </div> -->
+          <div class="input-group date">
+            <input type="text" class="form-control" id="MOEDate" placeholder="تاريخ المباشرة بالوزارة" required>
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+          </div>
+
+          <!-- <div style="vertical-align: top; display: inline-block; margin-top: 1em;">
+            <input class="input-group note" id="nowDate" placeholder="تاريخ المباشرة بالعمل الحالي" required/>
+          </div> -->
+          <div class="input-group date">
+            <input type="text" class="form-control" id="nowDate" placeholder="تاريخ المباشرة بالعمل الحالي" required>
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+          </div>
+
+          <input type="number" id="year1" class="input-group" placeholder="عدد سنوات الخدمة بالابتدائية" onmouseover="calcAmount()">
+          <input type="number" id="year2" class="input-group" placeholder="عدد سنوات الخدمة بالمتوسط" onmouseover="calcAmount()">
+          <input type="number" id="year3" class="input-group" placeholder="عدد سنوات الخدمة بالثانوي" onmouseover="calcAmount()">
+          <input type="number" id="year4" class="input-group" placeholder="عدد سنوات الخدمة قائد" onmouseover="calcAmount()">
+          <input type="number" id="year5" class="input-group" placeholder="عدد سنوات الخدمة وكيل" onmouseover="calcAmount()">
+          <input type="number" id="year6" class="input-group" placeholder="عدد سنوات الخدمة مرشد طلابي" onmouseover="calcAmount()">
+          <input type="number" id="year7" class="input-group" placeholder="عدد سنوات الخدمة مشرف تربوي" onmouseover="calcAmount()">
+          <input type="number" id="year8" class="input-group" placeholder="عدد سنوات الخدمة غير ذلك" onmouseover="calcAmount()"><br>
+
+          <label for="">مجموع سنوات الخدمة</label>
+          <input type="number" class="" id="year_amount" disabled><br>
+          
+          <div class="form-group row">
+            <label for="" class="col-lg-3 col-form-label mt-3"> الخدمة في مدارس</label>
+            <div class="col-sm-14">
+              <input id="m_year" type="number" placeholder="مقررات">
+              <input id="f_year" type="number" placeholder="فصلي">
+            </div>
+          </div>
+
+
+          <div class="container text-right mt-5 note">
+
+            <small>ملاحظة</small>
+            <p>نرجو استلام نسخة معتمدة من الادارة بعد الانتهاء من النموذج</p>
+          </div>
+      </div>
+      <p class="lead">
+        <a href="#top">
+          <button type="submit" class="btn btn-lg btn-secondary mt-5 note">ارسال الطلب
+            <small>✅</small>
+          </button>
+        </a>
+      </p>
+      </form>
+
+      <div class="container" id="message-bottom">
+      
+      </div>
+
+    </main>
+
+
+    <footer class="mastfoot mt-auto">
+      <div class="inner">
+        <p>تم التصميم والتطوير من قبل
+          <a href="https://github.com/abdulaziz003">عبدالعزيز البيضاني</a>
+          <a href="https://twitter.com/abdulaziz003">@abdulaziz</a>.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/momentjs.js"></script>
+  
+  <script src="js/moment-with-locales.js"></script>
+  <script src="js/moment-hijri.js"></script>
+  <script src="js/bootstrap-hijri-datetimepicker.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
